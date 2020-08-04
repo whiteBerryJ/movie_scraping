@@ -14,7 +14,7 @@ movie_code_list = []
 for movie in movie_list:
     movie_dict={}
     a_tag = movie.select_one('dl > dt > a')
-    title = a_tag.get_text()
+    title = a_tag.text
     _ , code = a_tag['href'].split('code=')
     
     movie_dict = {
